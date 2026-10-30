@@ -1,0 +1,21 @@
+FINAL CLASSIFICATION COMPARISON (test set)
+        Model  Accuracy  Precision  Recall  F1-Score  ROC-AUC
+          KNN    0.9625       1.00    0.94    0.9691   1.0000
+Decision Tree    0.9750       0.98    0.98    0.9800   0.9873
+    SVM (RBF)    0.9750       1.00    0.96    0.9796   1.0000
+
+Best classifier based on ROC-AUC:
+KNN, SVM (RBF)
+
+ROC-AUC:
+1.0000
+
+CONCLUSION
+Three classifiers (KNN, Decision Tree, SVM with RBF kernel) were compared on a held-out test set of 80 samples.
+KNN and SVM (RBF) tied for the highest ROC-AUC (1.0000).
+Test accuracy ranged from 0.9625 (KNN) to 0.9750 (Decision Tree).
+The highest recall was 0.9800 (Decision Tree); recall matters most here because a missed CKD patient (false negative) is the costliest error.
+KNN: train accuracy 0.9750, test accuracy 0.9625, gap 0.0125 (a small gap suggests good generalisation).
+Decision Tree: train accuracy 0.9812, test accuracy 0.9750, gap 0.0062 (a small gap suggests good generalisation).
+SVM (RBF): train accuracy 0.9906, test accuracy 0.9750, gap 0.0156 (a small gap suggests good generalisation).
+Note: the test set has only 80 samples, so small differences between models may not be statistically meaningful.

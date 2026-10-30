@@ -1,0 +1,6 @@
+KNN best params          : {'clf__metric': 'manhattan', 'clf__n_neighbors': 9}
+KNN best CV ROC-AUC      : 0.9995
+Decision Tree best params: {'clf__max_depth': 3, 'clf__min_samples_leaf': 5}
+Decision Tree CV ROC-AUC : 0.9770
+SVM best params          : {'clf__C': 0.1, 'clf__gamma': 'scale'}
+SVM best CV ROC-AUC      : 1.0000

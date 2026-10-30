@@ -1,0 +1,4 @@
+Model,TN,FP,FN,TP
+KNN,30,0,3,47
+Decision Tree,29,1,1,49
+SVM (RBF),30,0,2,48
