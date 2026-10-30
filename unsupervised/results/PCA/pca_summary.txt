@@ -1,0 +1,8 @@
+PCA SUMMARY (Iris, manual implementation)
+Eigenvalues              : [2.9381 0.9202 0.1477 0.0209]
+Explained variance ratio : [0.7296 0.2285 0.0367 0.0052]
+Cumulative variance      : [0.7296 0.9581 0.9948 1.    ]
+Variance captured by first 2 PCs: 95.81%
+Variance captured by first 3 PCs: 99.48%
+Shape of 2-PC data: (150, 2)
+Shape of 3-PC data: (150, 3)
