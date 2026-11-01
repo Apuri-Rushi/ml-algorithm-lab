@@ -3,6 +3,32 @@ __pycache__/
 *.py[codz]
 *$py.class
 
+
+# Raw datasets - do not upload
+datasets/raw/
+
+# Processed datasets (ignore generated data)
+datasets/processed/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Jupyter temporary files
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# VS Code local settings
+.vscode/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
 # C extensions
 *.so
 
