@@ -1,0 +1,38 @@
+================================================================================
+FINAL FOUR-MODEL CLASSIFICATION COMPARISON (Held-out Test Set, N=80)
+================================================================================
+              Model  Accuracy  Precision  Recall  F1-Score  ROC-AUC
+                KNN    0.9625       1.00    0.94    0.9691   1.0000
+      Decision Tree    0.9750       0.98    0.98    0.9800   0.9873
+          SVM (RBF)    0.9750       1.00    0.96    0.9796   1.0000
+1D Deep CNN (Bonus)    0.9750       1.00    0.96    0.9796   0.9947
+
+KEY EVALUATION FINDINGS:
+1. ROC-AUC Performance:
+   - KNN: 1.0000
+   - SVM (RBF): 1.0000
+   - 1D Deep CNN (Bonus): 0.9947
+   - Decision Tree: 0.9873
+   
+   KNN and SVM (RBF) achieve perfect ROC-AUC separation (1.0000), followed closely by the 1D Deep CNN (0.9947).
+
+2. Test Accuracy & F1-Score:
+   - Decision Tree: 0.9750 (Acc), 0.9800 (F1)
+   - SVM (RBF): 0.9750 (Acc), 0.9796 (F1)
+   - 1D Deep CNN: 0.9750 (Acc), 0.9796 (F1)
+   - KNN: 0.9625 (Acc), 0.9691 (F1)
+
+3. Clinical Sensitivity (Recall for Positive Class 'CKD'):
+   - Decision Tree: 0.9800 (49/50 CKD identified)
+   - SVM (RBF): 0.9600 (48/50 CKD identified)
+   - 1D Deep CNN: 0.9600 (48/50 CKD identified)
+   - KNN: 0.9400 (47/50 CKD identified)
+
+4. Model Complexity & Overfitting Assessment:
+   - Decision Tree: Constrained to max_depth=3, min_samples_leaf=5 to prevent memorization.
+   - SVM (RBF): Regularized with C=0.1, yielding optimal margin without support vector proliferation.
+   - 1D Deep CNN: Lightweight 2-layer architecture with Dropout (0.25, 0.3) and EarlyStopping, effectively preventing overfitting on N=256 training records.
+   
+5. Tabular 1D Convolution Considerations:
+   - 1D convolutions assume sequential or spatial neighborhood locality. In tabular medical records, feature column ordering is arbitrary. Despite this inherent inductive bias mismatch, 1D CNN with small kernels (k=3) captures localized feature interaction motifs and achieves competitive 0.9750 accuracy and 0.9947 ROC-AUC.
+================================================================================
